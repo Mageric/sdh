@@ -9,6 +9,8 @@ spring mvc example
 	├── service          //业务服务层，获取数据、处理业务逻辑、组装数据，由 action 调用这里的服务
 	├── util             //工具类
 
+    controller --> service --> dao
+
 #项目前端目录简介
     ├── smeui            //前段界面需要的资源
     ├── view             //视图
