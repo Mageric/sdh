@@ -19,7 +19,7 @@ public class DefaultAction {
 
     @RequestMapping("/skip")
     public String test1(Model model, HttpSession httpSession) {
-        logger.info("进入了默认的跳转类.............");
+        logger.info("进入了默认的跳转类");
         User user = new User();
         user.setName("orson");
         user.setOrg("it");
@@ -31,4 +31,9 @@ public class DefaultAction {
         return "default";
     }
 
+    @RequestMapping("/layer")
+    public String skipLayer() {
+
+        return "layer";
+    }
 }
