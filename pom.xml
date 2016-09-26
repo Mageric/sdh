@@ -6,7 +6,7 @@
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
     <name>sme</name>
-    <description>spring mvc example java webservices</description>
+    <description>spring mvc example</description>
 
     <dependencies>
         <!--spring mvc-->
@@ -41,40 +41,14 @@
         </dependency>
 
         <dependency>
-            <groupId>commons-configuration</groupId>
-            <artifactId>commons-configuration</artifactId>
-            <version>1.10</version>
-        </dependency>
-
-        <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>18.0</version>
         </dependency>
-
-        <dependency>
-            <groupId>org.springframework.ws</groupId>
-            <artifactId>spring-ws-core</artifactId>
-            <version>2.3.0.RELEASE</version>
-        </dependency>
     </dependencies>
     <build>
         <finalName>sme</finalName>
-      <!--  <resources>
-            &lt;!&ndash;表示把java目录下的有关xml文件,properties文件编译/打包的时候放在resource目录下&ndash;&gt;
-            <resource>
-                <directory>${basedir}/src/main/java</directory>
-                <includes>
-                    <include>**/*.properties</include>
-                    <include>**/*.xml</include>
-                </includes>
-            </resource>
-            <resource>
-                <directory>${basedir}/src/main/resources</directory>
-            </resource>
-        </resources>-->
         <plugins>
-            <!--servlet容器 jetty插件-->
             <plugin>
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
