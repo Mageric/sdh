@@ -9,7 +9,7 @@ public interface BaseDao<T, PK extends Serializable> {
      * @param id 记录ID
      * @return 实体对象
      */
-     T get(PK id);
+    T get(PK id);
 
     /**
      * 保存实体对象.
@@ -17,5 +17,5 @@ public interface BaseDao<T, PK extends Serializable> {
      * @param entity 对象
      * @return ID
      */
-     T save(T entity);
+    T save(T entity);
 }
