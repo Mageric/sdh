@@ -1,5 +1,5 @@
-# sme
-spring mvc example
+# sdh
+spring mvc + Druid + hibernate
 
 #项目 java后端目录简介
 	├── common           //公共的 action,util
