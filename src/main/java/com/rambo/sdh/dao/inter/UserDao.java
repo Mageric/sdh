@@ -2,7 +2,7 @@ package com.rambo.sdh.dao.inter;
 
 import com.rambo.sdh.pojo.User;
 
-public interface UserDao extends BaseDao<User, String> {
+public interface UserDao {
 
     /**
      * Description:通过 uuid 获取用户PO

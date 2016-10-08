@@ -5,16 +5,10 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "sh_user")
+@Table(name = "shd_user")
 public class User extends BasePO {
     String name;
     String pwd;
-
-    public User(String name, String pwd) {
-        super();
-        this.name = name;
-        this.pwd = pwd;
-    }
 
     @Column(nullable = false)
     public String getName() {

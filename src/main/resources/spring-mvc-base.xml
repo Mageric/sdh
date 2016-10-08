@@ -14,7 +14,7 @@
     <context:component-scan base-package="com.rambo"/>
 
     <!--对包中的静态资源进行访问映射，可进行整目录或者分资源【js,css,image...】进行映射-->
-    <mvc:resources mapping="/smeui/**" location="/smeui/"/>
+    <mvc:resources mapping="/sdhui/**" location="/sdhui/"/>
 
     <!-- 配置注解驱动 可以将request参数与绑定到controller参数上 -->
     <mvc:annotation-driven/>
