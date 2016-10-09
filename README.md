@@ -12,7 +12,7 @@ spring mvc + Druid + hibernate
     controller --> service --> dao
 
 #项目前端目录简介
-    ├── smeui            //前段界面需要的资源
+    ├── sdhui            //前段界面需要的资源
     ├── view             //视图
     ├── WEB-INF
 
