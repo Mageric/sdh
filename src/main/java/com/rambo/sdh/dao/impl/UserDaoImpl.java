@@ -8,11 +8,4 @@ import org.springframework.stereotype.Repository;
 public class UserDaoImpl extends BaseDaoImpl<User, String> implements UserDao {
 
 
-    public User findUserByUuid(String uuid) {
-        return get(uuid);
-    }
-
-    public User addUser(User user) {
-        return super.save(user);
-    }
 }
