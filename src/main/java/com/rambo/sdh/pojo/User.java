@@ -5,7 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "shd_user")
+@Table(name = "t_user")
 public class User extends BasePO {
     String name;
     String pwd;
