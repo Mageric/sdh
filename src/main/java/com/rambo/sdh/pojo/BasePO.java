@@ -12,14 +12,17 @@ import java.util.Date;
 
 @MappedSuperclass
 public class BasePO implements Serializable {
-    private String uuid;
-    private Date createDate;
-    private Date modifyDate;
-
     @Id
     @Column(length = 32, nullable = true)
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid")
+    private String uuid;
+
+    @Column(updatable = false)
+    private Date createDate;
+
+    private Date modifyDate;
+
     public String getUuid() {
         return uuid;
     }
@@ -28,7 +31,7 @@ public class BasePO implements Serializable {
         this.uuid = uuid;
     }
 
-    @Column(updatable = false)
+
     public Date getCreateDate() {
         return createDate;
     }

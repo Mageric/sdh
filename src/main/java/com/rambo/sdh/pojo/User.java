@@ -7,10 +7,11 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "t_user")
 public class User extends BasePO {
+    @Column(nullable = false)
     String name;
+    @Column(nullable = false)
     String pwd;
 
-    @Column(nullable = false)
     public String getName() {
         return name;
     }
@@ -19,7 +20,6 @@ public class User extends BasePO {
         this.name = name;
     }
 
-    @Column(nullable = false)
     public String getPwd() {
         return pwd;
     }
