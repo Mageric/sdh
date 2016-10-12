@@ -32,14 +32,27 @@ public class BaseDaoImpl<T, PK extends Serializable> implements BaseDao<T, PK> {
         return sessionFactory.getCurrentSession();
     }
 
-    public T get(PK id) {
+    public T getByKey(PK id) {
         Assert.notNull(id, "id is required");
         return (T) getSession().get(entityClass, id);
     }
 
-    public T save(T entity) {
+    public T add(T entity) {
         Assert.notNull(entity, "entity is required");
         getSession().save(entity);
         return entity;
+    }
+
+    public T edit(T entity) {
+        Assert.notNull(entity, "entity is required");
+        getSession().update(entity);
+        return entity;
+    }
+
+    public T deleteByKey(PK id) {
+        Assert.notNull(id, "id is required");
+        T t = (T) getSession().load(entityClass, id);
+        getSession().delete(t);
+        return t;
     }
 }

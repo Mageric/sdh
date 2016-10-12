@@ -12,10 +12,18 @@ public class UserServiceImpl implements UserService {
     UserDao userDao;
 
     public User findUserByUuid(String uuid) {
-        return userDao.get(uuid);
+        return userDao.getByKey(uuid);
     }
 
     public User addUser(User user) {
-        return userDao.save(user);
+        return userDao.add(user);
+    }
+
+    public User updateUser(User user) {
+        return userDao.edit(user);
+    }
+
+    public User deleteUserById(String uuid) {
+        return userDao.deleteByKey(uuid);
     }
 }

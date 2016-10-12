@@ -12,7 +12,7 @@ import java.util.Date;
 
 @MappedSuperclass
 public class BasePO implements Serializable {
-    private String id;
+    private String uuid;
     private Date createDate;
     private Date modifyDate;
 
@@ -20,12 +20,12 @@ public class BasePO implements Serializable {
     @Column(length = 32, nullable = true)
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid")
-    public String getId() {
-        return id;
+    public String getUuid() {
+        return uuid;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setUuid(String uuid) {
+        this.uuid = uuid;
     }
 
     @Column(updatable = false)
@@ -47,7 +47,7 @@ public class BasePO implements Serializable {
 
     @Override
     public int hashCode() {
-        return id == null ? System.identityHashCode(this) : id.hashCode();
+        return uuid == null ? System.identityHashCode(this) : uuid.hashCode();
     }
 
     @Override
@@ -62,11 +62,11 @@ public class BasePO implements Serializable {
             return false;
         }
         final BasePO other = (BasePO) obj;
-        if (id == null) {
-            if (other.getId() != null) {
+        if (uuid == null) {
+            if (other.getUuid() != null) {
                 return false;
             }
-        } else if (!id.equals(other.getId())) {
+        } else if (!uuid.equals(other.getUuid())) {
             return false;
         }
         return true;
